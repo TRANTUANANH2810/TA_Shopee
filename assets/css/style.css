@@ -1,0 +1,77 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0 ,#fd6232, #f6402e);
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.navbar__list {
+    padding-left: 0;
+    list-style: none;/* bor daaus chaam*/
+    margin-top: 4px;
+}
+
+.navbar__item {
+    margin: 8px;
+}
+
+.navbar__item--separate::after {
+    content: "";
+    border-left: 1px solid #ccc;
+    height: 12px;
+    margin: 0px -10px 0px 12px;
+}
+
+.navbar__item,
+.navbar__item-link{
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration:none;
+    font-weight: 300;
+    color: var(--white-color);
+}
+
+.navbar__item,
+.navbar__item-link,
+.navbar__icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar__item:hover,
+.navbar__item-link:hover,
+.navbar__icon-link:hover {
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.navbar__item--strong{
+    font-weight: 400;
+}
+
+.navbar__icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.navbar__icon {
+    font-size: 1.6rem;
+    margin: 0 6px;
+
+}
+.navbar__item--no-pointer {
+    cursor: text;
+    color: var(--white-color);
+}
+
+
