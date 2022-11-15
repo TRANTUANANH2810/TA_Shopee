@@ -30,5 +30,15 @@ html {
     flex-wrap: wrap;
 }
 
+/* Annimation */
+
+@keyframes faceIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 
