@@ -1,0 +1,119 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #fd6232, #f53e2d);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__list-item {
+    margin: 8px;
+    position: relative;
+    min-height: 26px;
+}
+
+.navbar__list-item,
+.navbar__list-item-link {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navbar__list-item,
+.navbar__list-item-link,
+.navbar__list-icon-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar__list-item--has-QR:hover .header__QR {
+    display: block;
+}
+
+.navbar__list-item:hover,
+.navbar__list-icon-link:hover,
+.navbar__list-item-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+.navbar__list-item-bold {
+    font-weight: 400;
+}
+
+.navbar__list-item-separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    background-color: #afafaf;
+    right: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* icon */
+.navbar__icon {
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+
+.navbar__list-icon-link {
+    color: var(--white-color);
+}
+
+.navbar__list-item--no-poiter {
+    cursor: text;
+    color: var(--white-color);
+}
+
+/* Header QR Code */
+
+.header__QR {
+    width: 186px;
+    position: absolute;
+    background-color: var(--white-color);
+    left: 0;
+    top: calc(100% + 6px);
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.header__QR::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 100%;
+    height: 20px;
+}
+
+.header__QR-img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.header__QR-app {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__QR-link:first-child {
+    margin-left: 11px;
+}
+
+.header__QR-link:nth-child(2) {
+    margin-right: 11px;
+}
+
+.header__QR-Down-img {
+    height: 16px;
+}

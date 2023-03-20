@@ -33,3 +33,14 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
