@@ -14,6 +14,7 @@ body {
 }
 
 :root {
+    --primary-color: #f53e2d;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;

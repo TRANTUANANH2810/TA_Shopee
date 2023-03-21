@@ -14,6 +14,10 @@
     min-height: 26px;
 }
 
+.navbar__list-item-has-notify:hover .header__notify {
+    display: block;
+}
+
 .navbar__list-item,
 .navbar__list-item-link {
     display: inline-block;
@@ -83,7 +87,7 @@
     top: calc(100% + 6px);
     border-radius: 2px;
     display: none;
-    animation: fadeIn ease-in 0.3s;
+    animation: fadeIn ease-in 0.2s;
 }
 
 .header__QR::before {
@@ -116,4 +120,125 @@
 
 .header__QR-Down-img {
     height: 16px;
+}
+
+/* THÔNG BÁO header notification */
+
+.header__notify {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #d3d3d3;
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrowth ease-in 0.25s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+.header__notify::before {
+    content: "";
+    border: solid;
+    border-width: 20px 30px;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 100%;
+    height: 22px;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: #888;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 40px;
+    margin: 0 12px;
+    user-select: none;
+}
+
+.header__notify-list {
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item--viewed {
+    background-color: rgba(245, 62, 45, 0.08);
+}
+
+.header__notify-link {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    padding: 12px;
+}
+
+.header__notify-link:hover {
+    background-color: #f7f7f7;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-title {
+    margin-top: 4px;
+    display: block;
+    font-size: 1.5rem;
+    color: var(--black-color);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.header__notify-desc {
+    line-height: 1.6;
+    display: block;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.header__notify-footer {
+    display: flex;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 8px 32px;
+    margin: auto;
 }
